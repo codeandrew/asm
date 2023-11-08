@@ -15,3 +15,10 @@ _start:
     mov eax, 1            ; System call number for sys_exit
     xor ebx, ebx          ; Return 0 status
     int 0x80              ; Call kernel
+
+; To compile and run
+; nasm -f elf hello_world.asm -o hello_world.o
+; ld -m elf_i386 -s -o hello hello_world.o
+; ./hello
+; Hello World!
+
